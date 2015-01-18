@@ -1,40 +1,49 @@
-$color-bg:					#f3f6fa;
-$color-fg:					#7c8081;
+@mixin line-icon($bg: $color-bg, $fg: $color-fg-bold) {
+	@include icon;
+	$size: 1px;
 
-$color-border:				transparentize($color-fg, 0.8);
+	&:before {
+		color: $bg !important;
+		text-shadow:	$size 0 0 $fg,
+						($size * -1) 0 0 $fg,
+						0 $size 0 $fg,
+						0 ($size * -1) 0 $fg;
+	}
+}
 
-$color-header-bg:			#fff;
-$color-header-fg:			inherit;
-$color-header-alt-bg:		transparent;
-$color-header-alt-fg:		#fff;
+// Misc.
+	$zindex-loader-overlay:			100000;
+	$max-spotlight:					20;
 
-$color-banner-bg:			#898786;
-$color-banner-fg:			#fff;
-$color-banner-inner-bg:		#341b2b;
-$color-banner-inner-fg:		#fff;
+// Duration.
+	$duration-transition:			0.2s;
+	$duration-landing-fadein:		1.5s;
 
-$color-footer-bg:			#E8EEF4;//#e2e5e8;
-$color-footer-fg:			#7c8081;
+// Size.
+	$size-border-radius:			4px;
+	$size-element-height:			3em;
+	$size-element-margin:			2em;
 
-$color-one-bg:				#83d3c9;
-$color-one-fg:				#fff;
-$color-two-bg:				#fff;
-$color-two-fg:				inherit;
-$color-three-bg:			#645862;
-$color-three-fg:			#fff;
+// Font.
+	$font-family:					'Roboto', Helvetica, sans-serif;
+	$font-family-fixed:				'Courier New', monospace;
+	$font-weight:					100;
+	$font-weight-bold:				300;
 
-$color-navPanel-bg:			#1c2021;
-$color-navPanel-fg:			#fff;
-$color-navButton-bg:		rgba(163,169,170,0.75);
-$color-navButton-fg:		#fff;
+// Color.
+	$color-bg:						#1c1d26;
+	$color-bg-transparent:			rgba(23,24,32,0.95);
+	$color-fg-bold:					#ffffff;
+	$color-fg:						rgba(255,255,255,0.75);
+	$color-fg-light:				rgba(255,255,255,0.5);
+	$color-fg-lighter:				rgba(255,255,255,0.15);
+	$color-border:					rgba(255,255,255,0.3);
+	$color-border-bg:				rgba(255,255,255,0.075);
+	$color-border2:					rgba(255,255,255,0.5);
+	$color-border2-bg:				rgba(255,255,255,0.25);
 
-$color-twitter-bg:			#70aecd;
-$color-twitter-fg:			#fff;
-$color-facebook-bg:			#7490c3;
-$color-facebook-fg:			#fff;
-$color-google-plus-bg:		#db6b67;
-$color-google-plus-fg:		#fff;
-$color-github-bg:			#dcad8b;
-$color-github-fg:			#fff;
-$color-dribbble-bg:			#da83ae;
-$color-dribbble-fg:			#fff;
+	$color-accent1-bg:				#e44c65;
+	$color-accent2-bg:				#272833;
+	$color-accent2-bg-transparent:	rgba(39,40,51,0.965);
+	$color-accent3-bg:				#5480f1;
+	$color-accent4-bg:				#39c088;
