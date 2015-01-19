@@ -1,14 +1,11 @@
-Landed by HTML5 UP
+ZeroFour by HTML5 UP
 html5up.net | @n33co
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 
-A dark, slick, modern, responsive, adjective-drenched design built around an extremely
-dynamic landing page (scroll that mofo!). Inspired by Big Picture, another design
-of mine with a similarish feel/flow, only this time I took it waaaaaay further and
-actually made it multipurpose (versus copping out and making it a one pager like I
-did last time ;) Includes multiple pages, a bunch of pre-styled elements, and all
-its Sass sources.
+A responsive general purpose site template design named as such because it's the fourth 
+design up here (very creative I know). Has plenty of room for all sorts of content 
+and even multilevel drop down menus.
 
 Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
 you can use for pretty much whatever.
@@ -33,4 +30,6 @@ Credits:
 		jQuery (jquery.com)
 		html5shiv.js (@afarkas @jdalton @jon_neal @rem)
 		CSS3 Pie (css3pie.com)
-		skel (getskel.com)
+		background-size polyfill (github.com/louisremi)
+		jquery.dropotron (n33.co)
+		skel (n33.co)

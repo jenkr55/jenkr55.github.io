@@ -1,33 +1,68 @@
 /*
-	Landed by HTML5 UP
+	ZeroFour by HTML5 UP
 	html5up.net | @n33co
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
-/* Loader */
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
 
-	body.landing:before, body.landing:after {
-		display: none !important;
+	.button
+	{
+		background-image: url('images/grad0-20.svg');
+	}
+	
+	.box-feature1
+	{
+	}
+	
+		.box-feature1 header.second
+		{
+			left: 0;
+		}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	#footer-wrapper
+	{
+		background-image: url('images/grad0-35.svg');
+	}
+		
+/*********************************************************************************/
+/* Header                                                                        */
+/*********************************************************************************/
+
+	#header
+	{
 	}
 
-/* Icon */
+		#header .inner
+		{
+			background-image: url('images/grad0-35.svg');
+		}
 
-	.icon.alt {
-		color: inherit !important;
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+	
+	.dropotron
+	{
+		background-image: url('images/grad35-0.svg');
+	}
+	
+/*********************************************************************************/
+/* Mobile UI                                                                     */
+/*********************************************************************************/
+
+	#titleBar
+	{
+		background-image: url('images/grad0-35.svg');
 	}
 
-	.icon.major.alt:before {
-		color: #ffffff !important;
-	}
-
-/* Banner */
-
-	#banner:after {
-		background-color: rgba(23, 24, 32, 0.95);
-	}
-
-/* Footer */
-
-	#footer .icons .icon.alt:before {
-		color: #ffffff !important;
+	#navPanel
+	{
+		background-image: url('images/grad0-35.svg');
 	}
