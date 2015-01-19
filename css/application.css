@@ -10,3 +10,8 @@
   max-width: 300px;
   text-transform: lowercase;
  }
+ 
+ .me-image {
+   max-height: 300px;
+   border-radius: 10%;
+ }
