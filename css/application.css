@@ -4,6 +4,12 @@
     font-size: .7em;
     font-family: courier;
     text-transform: lowercase;
+    padding-left: 110px;
+  }
+  
+  #name {
+  font-size: 5em;
+  font-family: helvetica;
   }
 
 #desc {
@@ -28,3 +34,4 @@
   background-position: 70% 20% !important;
   background: url('images/header.png');
   }
+  
