@@ -776,7 +776,7 @@
 			border-left: 0;
 			border-right: 0;
 			color: #fff;
-			color: rgba(255,255,255,0.75);
+			color: rgba(255,255,255,1);
 			font-size: 2.35em;
 			font-weight: 700;
 			line-height: 1.3em;
@@ -826,7 +826,7 @@
 
 	#header-wrapper
 	{
-		background: url('images/bg01.png'), url('../images/header.jpg');
+		background: url('../images/bg01.jpg');
 		background-position: top left, center center;
 		background-size: auto, cover;
 	}
