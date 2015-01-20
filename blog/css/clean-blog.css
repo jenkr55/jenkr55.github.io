@@ -146,7 +146,7 @@ hr.small {
 .intro-header .post-heading,
 .intro-header .page-heading {
   padding: 100px 0 50px;
-  color: white;
+  color: #383838;
 }
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
@@ -177,6 +177,7 @@ hr.small {
   .intro-header .site-heading h1,
   .intro-header .page-heading h1 {
     font-size: 80px;
+    color: #383838;
   }
 }
 .intro-header .post-heading h1 {
@@ -373,12 +374,12 @@ form .row:first-child .floating-label-form-group {
   cursor: not-allowed;
 }
 ::-moz-selection {
-  color: white;
+  color: #383838;
   text-shadow: none;
   background: #0085a1;
 }
 ::selection {
-  color: white;
+  color: #383838;
   text-shadow: none;
   background: #0085a1;
 }
