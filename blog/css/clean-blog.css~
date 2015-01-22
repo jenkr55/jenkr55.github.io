@@ -374,12 +374,12 @@ form .row:first-child .floating-label-form-group {
   cursor: not-allowed;
 }
 ::-moz-selection {
-  color: white;
+  color: #383838;
   text-shadow: none;
   background: #0085a1;
 }
 ::selection {
-  color: white;
+  color: #383838;
   text-shadow: none;
   background: #0085a1;
 }
