@@ -72,7 +72,7 @@
                     <div class="post-heading">
                         <h1 style="color: white">Ruby Twitter Bot Tutorial</h1>
                         <h2 class="subheading" style="color: white">How to make a simple, easy Twitter bot using the Ruby programming language.</h2>
-                        <span class="meta">January 22, 2015</span>
+                        <span class="meta">January 20, 2015</span>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
 
 		   <p>First, make sure you have Ruby installed. You can learn how to do that 
 			<a href="https://www.ruby-lang.org/en/documentation/installation/">here</a>. In this tutorial we'll be using the 
-			command line, so it's best to keep your files for this project in a separate folder. </p>
+			command line, so it's best to keep your files for this project in their own folder. </p>
 	
 		  <p>Before we get started, you need to make a Twitter account for your bot. Your account will need its own mobile number,
 		    but you can use <a href="https://www.google.com/voice">Google Voice</a> if you've already used your number for a Twitter
@@ -104,9 +104,8 @@
 		    on "Create New App" and fill out the form. The name, description, and website don't really matter that much, so don't
 		    worry if you don't have a website or good name for your application. You can always change it later.</p>
 
-		<p>After this, you should be able to click on the "Keys and Access Tokens" to view your tokens. This is how we'll authorize
-		   Twitter later on. Make sure you have tokens under the "Application Settings" and "Your Access Token" headings. Make
-		   sure you keep these keys secret. Make sure you give the account read and write permissions.</p>
+		<p>After this, you should be able to click on the "Keys and Access Tokens" to generate and view your tokens. This is how we'll authorize
+		   Twitter later on. Make sure you have tokens under the "Application Settings" and "Your Access Token" headings. You need to keep these keys secret. Give the account at least read and write permissions.</p>
 
 		<img class="blogImg" src="img/botTutorial/tutorial1.png">
 
@@ -116,7 +115,7 @@
 
 		<img class="blogImg" src="img/botTutorial/tutorial2.png">
 
-		<p>Since we need to use this gem in our program, we have to require it before we do anything else. </p>
+		<p>Next, open up your ruby file in your editor. Since we need to use the Twitter Gem in our program, we have to require it before we do anything else. </p>
 
 		<img class="blogImg" src="img/botTutorial/tutorial3.png">
 
