@@ -11,7 +11,3 @@ p {
   font-family: helvetica;
   font-size: .85em;
 }
-
-.blogImg {
-  max-width: 100%
-}
