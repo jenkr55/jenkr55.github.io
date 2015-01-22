@@ -153,7 +153,7 @@
 		<p>You can pretty much run your Twitter bot as often or seldom as you want, however, if you run your bot too much then you might
 		get <a href="https://dev.twitter.com/rest/public/rate-limiting">rate limited</a>. </p>
 
-		<p>If your bot isn't running or posting, run "heroku logs" in your command line to check what's going on. </p>
+		<p>If your bot isn't running or working, run the command "heroku logs" in your command line to check what's going on. </p>
 
 		<p>After that, you're good to go! You can always tweak your bot a little bit and re-deploy to Heroku. Have fun! </p>
 
