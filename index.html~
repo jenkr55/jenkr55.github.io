@@ -75,7 +75,7 @@
 									</div>
 									<div class="4u">
 										<section>
-											<a href="blog" class="image featured"><img src="images/img-tea.jpg" alt="" /></a>
+											<a href="blog" class="image featured"><img src="images/header-laptop.jpg" alt="" /></a>
 											<header class="second icon fa-user">
 												<h3>My blog</h3>
 												<p id="desc">A blog where I write about my projects,<br> programming, and
@@ -204,6 +204,9 @@
 													<dd><a href="http://twitter.com/jen_a_fir">@jen_a_fir</a></dd>
 													<dt>Facebook</dt>
 													<dd><a href="http://facebook.com/jennifer.kruse">facebook.com/jennifer.kruse</a></dd>
+<dt>LinkedIn</dt>
+													<dd><a href="https://www.linkedin.com/in/krusejennifer">Jennifer Kruse</a></dd>
+
 												</dl>
 											</div>
 										</div>
