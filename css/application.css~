@@ -18,7 +18,7 @@
  }
  
  .me-image {
-   max-height: 250px;
+   max-height: 210px;
    border-radius: 10%;
  }
  
@@ -32,6 +32,6 @@
 
 #header-wrapper {
   background-position: 70% 20% !important;
-  background: url('images/header.png');
+  background: url('images/header1.jpg');
   }
   
