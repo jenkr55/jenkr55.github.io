@@ -1,0 +1,29 @@
+<head>
+<link rel="stylesheet" type="text/css" href="application.css">
+</head>
+
+<body class="bg" background="http://static.pexels.com/wp-content/uploads/2015/02/blur-4450-825x550.jpg">
+
+<div class="box">
+<textarea class="FormElement" cols="100" id="wordBox"  rows="30" onKeyPress='changeBG(this.value);'></textarea>
+  </div>
+</body>
+
+<script>
+function countWords(){
+	s = document.getElementById("wordBox").value;
+	s = s.replace(/(^\s*)|(\s*$)/gi,"");
+	s = s.replace(/[ ]{2,}/gi," ");
+	s = s.replace(/\n /,"\n");
+  return s.split(' ').length;
+}
+
+function changeBG() {
+if( countWords() % 50 == 0){
+  var randomnumber=Math.floor(Math.random()*102)
+  var filename = "/images/file-" + randomnumber;
+  document.body.background = filename
+}
+}
+
+</script>
