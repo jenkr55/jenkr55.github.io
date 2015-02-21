@@ -6,7 +6,7 @@
 
 <div class="header">ZenWriter</div>
 <div class="box">
-<textarea class="FormElement" cols="100" id="wordBox"  rows="30" onKeyPress='changeBG(this.value);' onfocus='eraseText(this);'>Click here to begin typing. Every 25 words, a new background will appear.</textarea>
+<textarea class="FormElement" cols="100" id="wordBox"  rows="30" onKeyPress='changeBG(this.value);' onfocus='eraseText(this);'>Click here to begin typing. Every 50 words, a new background will appear.</textarea>
   </div>
 </body>
 
@@ -22,7 +22,7 @@ function countWords(){
 function changeBG() {
 text = document.getElementById("wordBox").value;
 char = text.slice(-1);
-if( countWords() % 25 == 0 && char == " "){
+if( countWords() % 50 == 0 && char == " "){
   var randomnumber=Math.floor(Math.random()*102)
   var filename = "http://www.jenniferkruse.me/ZenWriter/images/file-" + randomnumber+".jpg";
   document.body.background = filename
