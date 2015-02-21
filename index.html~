@@ -73,7 +73,7 @@
 									</div>
 									<div class="4u">
 										<section>
-											<a href="blog" class="image featured"><img src="images/header-laptop.jpg" alt="" /></a>
+											<a href="blog/post20150219.html" class="image featured"><img src="images/chinese.jpg" alt="" /></a>
 											<header class="second icon fa-user">
 												<h3>Learning Chinese</h3>
 												<p id="desc">Check out my recent blog post about <br>learning Chinese this past year.</p>
