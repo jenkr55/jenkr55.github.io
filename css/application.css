@@ -20,6 +20,7 @@
  .me-image {
    max-height: 210px;
    border-radius: 10%;
+   max-width: 193px;
  }
  
  #placeholder {
