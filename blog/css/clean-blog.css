@@ -133,6 +133,7 @@ hr.small {
   }
 }
 .intro-header {
+  background-color: #808080;
   background: no-repeat center center;
   background-attachment: scroll;
   -webkit-background-size: cover;
@@ -171,13 +172,6 @@ hr.small {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 300;
   margin: 10px 0 0;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .site-heading h1,
-  .intro-header .page-heading h1 {
-    font-size: 80px;
-    color: white;
-  }
 }
 .intro-header .post-heading h1 {
   font-size: 35px;
