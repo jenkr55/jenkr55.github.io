@@ -2,8 +2,9 @@
 <link rel="stylesheet" type="text/css" href="application.css">
 </head>
 
-<body class="bg" background="http://static.pexels.com/wp-content/uploads/2015/02/blur-4450-825x550.jpg">
+<body onload="initialBG()" class="bg">
 
+<div class="header">ZenWriter</div>
 <div class="box">
 <textarea class="FormElement" cols="100" id="wordBox"  rows="30" onKeyPress='changeBG(this.value);'></textarea>
   </div>
@@ -19,11 +20,16 @@ function countWords(){
 }
 
 function changeBG() {
-if( countWords() % 50 == 0){
+if( countWords() % 25 == 0){
   var randomnumber=Math.floor(Math.random()*102)
   var filename = "http://www.jenniferkruse.me/ZenWriter/images/file-" + randomnumber+".jpg";
   document.body.background = filename
 }
 }
 
+function initialBG(){
+var randomnumber = Math.floor(Math.random()*105)
+var filename = "http://www.jenniferkruse.me/ZenWriter/images/file-" + randomnumber+".jpg";
+  document.body.background = filename
+}
 </script>

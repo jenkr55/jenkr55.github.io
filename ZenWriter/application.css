@@ -12,12 +12,24 @@
 
 .box {
   width: 700px ;
-  margin-left: auto ;
+  margin-left: 200px ;
   margin-right: auto ;
-  margin-top: 160px;
+  margin-top: 100px;
   margin-bottom: auto;
 }
+
 html, body {
     margin: 0;
-    height: 100%;
+}
+
+.header {
+   color: white;
+   font-size: 40px;
+   font-family: Helvetica;
+   font-weight: bold;
+   margin-left: 5px;
+   margin-top: 2px;
+}
+.header:hover {
+   opacity: .5;
 }
