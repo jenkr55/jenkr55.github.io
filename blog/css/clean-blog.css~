@@ -65,7 +65,6 @@ hr.small {
 }
 @media only screen and (min-width: 768px) {
   .navbar-custom {
-    background: transparent;
     border-bottom: 1px solid transparent;
   }
   .navbar-custom .navbar-brand {
@@ -374,12 +373,12 @@ form .row:first-child .floating-label-form-group {
   cursor: not-allowed;
 }
 ::-moz-selection {
-  color: #383838;
+  color: white;
   text-shadow: none;
   background: #0085a1;
 }
 ::selection {
-  color: #383838;
+  color: white;
   text-shadow: none;
   background: #0085a1;
 }
