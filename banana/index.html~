@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="app.css">
+<title>Banana - Jennifer Kruse</title>
+</head>
+
+<body>
+
+<div class="bananaSquare" id="bananaSquare">
+<p>1. place banana here
+<br><br>2. click color that most closely matches the color of your banana
+<br><br>3. lift banana to see diagnosis</p>
+</div>
+</body>
+</html>
+
+<script>
+function percentwidth(elem){
+    var pa= elem.offsetParent || elem;
+    return ((elem.offsetWidth/pa.offsetWidth)*100).toFixed(2)+'%';
+}
+
+document.addEventListener("mousedown", function(){
+var width = document.documentElement.clientWidth;
+var clickWidth = event.clientX;
+var percent = clickWidth / width;
+
+if(percent < .15) {
+	text = "This banana is probably still attached to the tree and should not be picked yet.";
+} else if (percent < .2) {
+	text = "This banana is still pretty green and won't taste sweet at all. Wait a few days before eating.";
+} else if (percent < .25) {
+	text = "Only a few more days until the banana is ripe enough to eat!";
+} else if (percent < .28){
+	text = "Almost ripe! Wait a day or two for it to turn more yellow." ;
+} else if (percent < .34){
+	text = "This banana is ripe and good to eat! Your banana is a bit firm and semi-sweet. If you would like your banana to be sweeter, then wait about a day.";
+} else if (percent < .4){
+	text = "This banana is ripe and good to eat! Your banana is semi-firm and pretty sweet tasting. Please consider eating the rest of your bananas as they will go bad within a few days."
+} else if (percent < .47){
+	text = "This banana is softer and pretty sweet. The rest of your bananas are going to go bad in about a day unless you eat them.";
+} else if (percent < .59){
+	text = "This banana is weirdly soft, brown, and sweet, but maybe that's your thing. This banana would probably make some good banana bread.";
+} else if (percent < .66){
+	text = "Probably attracting fruit flies by now...";
+} else if (percent < .85){
+	text = "Just throw it away, please."
+} else {
+	text = "Toxic waste."
+}
+  document.getElementById('bananaSquare').innerHTML = "<p style=\"padding-top: 66px;\">" + text + "</p>" + " " + percent;
+});
+</script>
