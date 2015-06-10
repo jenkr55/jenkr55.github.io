@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jennifer Kruse - Tutorial: Make a Tinder Bot Using Ruby</title>
+    <title>Jennifer Kruse - Ruby Tinder Bot: Part 1</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -84,18 +84,6 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
- <p>One of my favorite small programming projects to do is make bots. Previously I've made <a href="http://jenniferkruse.me/blog/post20150123.html">Twitter</a> and <a href="http://jenniferkruse.me/blog/post20150302.html">Reddit</a> bots. This time, I decided to go for something slightly more difficult and make a Tinder bot, so here I'll outline the basic steps on how you can make one too. This tutorial assumes you have some basic knowledge in Ruby and the command line. I'll be skipping over some of the basic steps outlined in <a href="http://jenniferkruse.me/blog/post20150123.html">my previous bot tutorial</a>. Unlike my previous Twitter bot, we will be unable to have this bot automatically run on its own schedule through Heroku. Also, when running your bot, please be ethical because you'll be interacting with real people on this app. Don't mess with people too much or agree to meet up with them if you have no intentions to. </p>                  
-<h3>Before we begin...</h3>
-<p>First, you need to set up the tinder account you'd like to use for this bot. If you wish to use an account that doesn't represent you, you'll need to create a separate Facebook account to log in with. This can get a bit tricky, because sometimes Tinder wants you to have a certain number of friends (so add random people until you get 50ish), and you'll probably need a phone number to log in with. <a href="https://www.google.com/voice/">Google Voice</a> would do the trick. I've had a separate Facebook account for a while for projects like this so I'm not exactly sure how to get a profile set up with a new Facebook account, but if you run into problems then you should be able to find a solution online. </p>
-<h3>Time to code</h3>
-<p>We'll be using the <a href="https://github.com/nneal/tinder_pyro">tinder_pyro</a> gem in our bot. Tinder doesn't actually have a public API so we'll make our requests through this gem. To authenticate, we'll need the Facebook ID and Facbeook token. The Facebook Token is annoying to work with, because it expires after a set time (which is why we can't use the Heroku scheduler this time) so we need to grab it each time we run the bot.</p>
-<p>To get your Facbeook ID, log into the Facebook account you'll be using, replace <b>your_facebook_username</b> in this link with your Facebook username: <br><br><b>http://graph.facebook.com/your_fb_username</b><br><br> and grab your ID from that page. Getting the Facbeook token can be a bit tricky. <a href="https://www.facebook.com/dialog/oauth?client_id=464891386855067&redirect_uri=https://www.facebook.com/connect/login_success.html&scope=basic_info,email,public_profile,user_about_me,user_activities,user_birthday,user_education_history,user_friends,user_interests,user_likes,user_location,user_photos,user_relationship_details&response_type=token">Click on this link</a>, and it will redirect you to a new URL. Quickly copy and paste that URL before it redirects you again. The URL will include your access token and look something like this: <br><br>https://www.facebook.com/connect/login_success.html#access_token=<b>This very long string right here is your access token!</b>&expires_in=5614<br><br>
-The Facbeook ID and Facebook token are the only two things we need to log into our Tinder bot, so now we authenticate: </p>
-<img src="img/tinderbottutorial/screenshot1.png">
-<p>The annoying thing is, after the Facebook token expires, you'll have to grab it again when you want to run your code. (There is probably a better way to do this but I haven't looked into it much.)</p>
-<p>Now we're all set for the fun stuff!</p>
-
-
 <h3>Examples</h3><br>
 <h4>Swiping right on every nearby user</h4>
 <p>To get nearby users, we'll need the get_nearby_users method. </p>
@@ -104,8 +92,12 @@ The Facbeook ID and Facebook token are the only two things we need to log into o
 <p>{"distance_mi"=>9, "common_like_count"=>0, "common_friend_count"=>0, "common_likes"=>[], "common_friends"=>[], "_id"=>"<b>user's id</b>", "bio"=>"", "birth_date"=>"1990-02-22T00:00:00.000Z", "gender"=>0, "name"=>"Tanner", "ping_time"=>"2015-05-24T17:05:58.535Z", "photos"=>[{"id"=>"<i>photo's id</i>", "url"=>"<i>photo's url</i>", "main"=>false, "fileName"=>"<i>photo's file name</i>", "extension"=>"jpg", "processedFiles"=>[{"url"=>"<i>url here</i>", "height"=>640, "width"=>640}, {"url"=>"<i>url here</i>", "height"=>320, "width"=>320}, {"url"=>"<i>url here</i>", "height"=>172, "width"=>172}, {"url"=>"<i>url here</i>", "height"=>84, "width"=>84}]},], "birth_date_info"=>"fuzzy birthdate active, not displaying real birth_date"}</p>
 <p>Then, if we want to swipe right on every user that gets returned to us, we'll need to iterate over them and use the like method that takes in _id.</p>
 <img src="img/tinderbottutorial/screenshot3.png">
-<p>get_nearby_users only returns 10 or 11 users, so this will only swipe right to 10 or 11 users at a time. Tinder rate-limits how many swipes you get a day, so if the id that gets returned contains rate_limited or something, then you'll have to wait 12ish hours.
+<p>get_nearby_users only returns 10 or 11 users, so this will only swipe right to 10 or 11 users at a time. Tinder rate-limits how many swipes you get a day, so if you get rate limited then you'll have to wait 12ish hours.
 <br><br><br><br>
+
+
+<h4>Getting nearby users</h4>
+<p>Getting nearby users through the tinder_pyro API is pretty simple.
 
 
 <h4>Getting nearby users</h4>
@@ -118,8 +110,8 @@ The Facbeook ID and Facebook token are the only two things we need to log into o
     <script type="text/javascript">
         /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
         var disqus_shortname = 'jenniferkruse'; // required: replace example with your forum shortname
-	var disqus_identifier = 'tinderbottutorial';
-	var disqus_url = 'http://jenniferkruse.me/blog/tinder-bot-tutorial';
+	var disqus_identifier = 'tinderbottutorial2';
+	var disqus_url = 'http://jenniferkruse.me/blog/tinder-bot-tutorial-part2';
 
         /* * * DON'T EDIT BELOW THIS LINE * * */
         (function() {
