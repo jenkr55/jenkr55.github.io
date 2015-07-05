@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jennifer Kruse - Ruby Tinder Bot: Part 1</title>
+    <title>Jennifer Kruse - Ruby Tinder Bot: Part 2</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -70,9 +70,9 @@
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="post-heading" style="margin-bottom: -130px">
-                        <h1 style="color: white">Tutorial: Make a Tinder Bot Using Ruby</h1>
-                        <h2 class="subheading" style="color: white">------------PLACEHOLDER==================== </h2>
-                        <span class="meta" style="color:white">		DATE PLACEHOLDER</span>
+                        <h1 style="color: white">Tutorial: Make a Tinder Bot Using Ruby: Part 2</h1>
+                        <h2 class="subheading" style="color: white"> How to program your bot to do what you want. </h2>
+                        <span class="meta" style="color:white">		July 5, 2015</span>
                     </div>
                 </div>
             </div>
@@ -84,24 +84,35 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<h3>Examples</h3><br>
-<h4>Swiping right on every nearby user</h4>
+ <p>In <a href="http://jenniferkruse.me/blog/tinder-bot-tutorial.html">Part 1</a> of this tutorial, I explained how to set up your Tinder bot. Now I'll go through some of the ocde examples. A great place to look for references is the tinder_pyro <a href="https://github.com/nneal/tinder_pyro">Github page</a> and <a href="http://www.rubydoc.info/gems/tinder_pyro/0.0.1">documentation for the gem</a>.
+
+<h4>Getting Nearby Users</h4>
 <p>To get nearby users, we'll need the get_nearby_users method. </p>
 <img src="img/tinderbottutorial/screenshot2.png">
 <p>This will return an array ("results") of users that is formatted like this: <i>(please note: I have taken out identifying information, and the photos array usually has more than one photo)</i></p>
 <p>{"distance_mi"=>9, "common_like_count"=>0, "common_friend_count"=>0, "common_likes"=>[], "common_friends"=>[], "_id"=>"<b>user's id</b>", "bio"=>"", "birth_date"=>"1990-02-22T00:00:00.000Z", "gender"=>0, "name"=>"Tanner", "ping_time"=>"2015-05-24T17:05:58.535Z", "photos"=>[{"id"=>"<i>photo's id</i>", "url"=>"<i>photo's url</i>", "main"=>false, "fileName"=>"<i>photo's file name</i>", "extension"=>"jpg", "processedFiles"=>[{"url"=>"<i>url here</i>", "height"=>640, "width"=>640}, {"url"=>"<i>url here</i>", "height"=>320, "width"=>320}, {"url"=>"<i>url here</i>", "height"=>172, "width"=>172}, {"url"=>"<i>url here</i>", "height"=>84, "width"=>84}]},], "birth_date_info"=>"fuzzy birthdate active, not displaying real birth_date"}</p>
-<p>Then, if we want to swipe right on every user that gets returned to us, we'll need to iterate over them and use the like method that takes in _id.</p>
+
+<h4>Swiping Right</h4>
+<p>If we want to swipe right on a user, first we'll need their ID which can be retrieved from the user hash I showed above. Then we can pass in that id as an argument into the like function. </p>
+<img src="img/tinderbottutorial/screenshot4.png">
+<br>
+
+<h4>Swiping Right on Every Nearby User</h4>
+<p>if we want to swipe right on every user that gets returned to us, we'll need to iterate over them and use the like method.
 <img src="img/tinderbottutorial/screenshot3.png">
 <p>get_nearby_users only returns 10 or 11 users, so this will only swipe right to 10 or 11 users at a time. Tinder rate-limits how many swipes you get a day, so if you get rate limited then you'll have to wait 12ish hours.
+
+<h4>Getting updates: Matches and Messages</h4>
+<p>To get the list of matches and updates your bot has, we'll use the fetch_updates method. This method takes in one argument, a time, and will return all updates on your account since that given time. For my bot, I have a log that spits out <b>Time.now</b> during execution, so I can grab that time for when I want to run the bot next. </p>
+<img src="img/tinderbottutorial/screenshot5.png">
+<p>This method returns a giant hash that I have simplified for you here. "Matches" is an array, so normally there is more than one in this array: </p>
+<p>{"matches"=>[{"_id"=>"<b>User ID</b>", "messages"=>[{"_id"=>"<b>Message ID</b>", "match_id"=>"<b>Match ID</b>", "to"=>"<b>To ID</b>", "from"=>"<b>From ID</b>", "message"=>"<b>Incoming message's text will be here.</b>", "sent_date"=>"2015-07-04T19:11:13.707Z", "created_date"=>"2015-07-04T19:11:13.707Z", "timestamp"=>1436037073707}], "last_activity_date"=>"<b>When the user was last online.</b>"}], "blocks"=>["<b>Not really sure what this is.</b>"], "lists"=>[], "deleted_lists"=>[], "last_activity_date"=>"<b>When the user was last online.</b>"}</p>
+
+<h4>Sending Messages</h4>
+<p>To send a message, we'll use the send_message method. It takes two arguments, an ID and the message text. The ID is the User ID of who you want the message to go to, and it can come from the hash returned from the above fetch_updates method. <p>
+<img src="img/tinderbottutorial/screenshot6.png">
 <br><br><br><br>
 
-
-<h4>Getting nearby users</h4>
-<p>Getting nearby users through the tinder_pyro API is pretty simple.
-
-
-<h4>Getting nearby users</h4>
-<p>Getting nearby users through the tinder_pyro API is pretty simple.
 
 <p class="contactText"> Questions? Comments? Don't hesitate to <a href="http://jenniferkruse.me/#footer">contact me</a>!</p>
                 
