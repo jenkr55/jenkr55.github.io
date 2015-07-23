@@ -1,0 +1,63 @@
+<head>
+<link rel="stylesheet" type="text/css" href="application.css">
+<title>Regex Tester - Jennifer Kruse</title>
+</head>
+
+<body onload="initialBG()" class="bg">
+
+<div class="header">Regex Tester</div>
+<div class="box">
+<b style="font-size: 3em; color: white;"> / </b><textarea class="FormElement" cols="45" id="regexBox" rows="1" placeholder="regex" onKeyUp='getMatches();'  style="width: 75%;"></textarea><b style="font-size: 3em; color: white;"> / </b><textarea class="FormElement" cols="14" rows="1" placeholder="gmixXsuUAJ" id="extra" onKeyUp='getMatches();' style="Width: 17.5%;"></textarea><br><br>
+<div class="display: inline-block">
+<textarea class="FormElement" style="width: 49%; float: left;" cols="30" id="wordBox"  rows="15" onkeyup='getMatches();' placeholder="Test your regular expression by typing in this box."></textarea>
+  <textarea class="FormElement" style="width: 49%; float: right;" cols="30" id="resultBox" rows="15" placeholder="Matches will appear here."></textarea>
+  </div>
+  </div>
+</body>
+
+<script>
+
+function initialBG(){
+var randomnumber = Math.floor(Math.random()*105)
+var filename = "http://www.jenniferkruse.me/ZenWriter/images/file-" + randomnumber+".jpg";
+  document.body.background = filename
+}
+
+function getMatches(){
+regexString = "/" + document.getElementById("regexBox").value + "/" + document.getElementById("extra").value;
+text = document.getElementById("wordBox").value;
+
+
+var regParts = regexString.match(/^\/(.*?)\/([gim]*)$/);
+console.log(regParts);
+if (regParts) {
+    // delimters/modifiers
+    var regex = new RegExp(regParts[1], regParts[2]);
+} else {
+    var regex = new RegExp(regexString);
+}
+
+matches = text.match(regex);
+console.log(matches)
+
+document.getElementById("resultBox").value = ""
+if(matches){
+for(i = 0; i < matches.length; i++){
+  document.getElementById("resultBox").value += matches[i];
+  document.getElementById("resultBox").value += '\n'
+}
+}
+}
+
+</script>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59909033-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
