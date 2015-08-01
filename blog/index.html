@@ -75,12 +75,17 @@
             </div>
         </div>
     </header>
-
+    <div class="container">
+        <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <p class="show">  Show: <a class="showLink" id="prog" href="#">Programming</a> | <a class="showLink" id="pers" href="#">Personal</a> | <a class="showLink" id="all" href="#">All</a> </p>
+      </div></div></div>
     <!-- Main Content -->
    <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-<div class="post-preview">
+
+<div class="post-preview personal">
                     <a href="washingtonDC.html">
                         <h2 class="post-title">
                             Ellie and Jen Do DC
@@ -93,7 +98,7 @@
                 </div>
 <hr>
 
-<div class="post-preview">
+<div class="post-preview programming">
                     <a href="tinder-bot-tutorial-part2.html">
                         <h2 class="post-title">
                             Ruby Tinder Bot: Part 2
@@ -106,7 +111,7 @@
                 </div>
 <hr>
 
-<div class="post-preview">
+<div class="post-preview programming">
                     <a href="tinder-bot-tutorial.html">
                         <h2 class="post-title">
                             Ruby Tinder Bot: Part 1
@@ -120,7 +125,7 @@
 <hr>
 
 
-	<div class="post-preview">
+	<div class="post-preview personal">
                     <a href="post20150411.html">
                         <h2 class="post-title">
                             My Fake Boyfriend
@@ -137,7 +142,7 @@
 
 
 
-		<div class="post-preview">
+		<div class="post-preview programming">
                     <a href="post20150302.html">
                         <h2 class="post-title">
                             Cleverbot on Reddit
@@ -150,7 +155,7 @@
                 </div>
 <hr>
 
-                <div class="post-preview">
+                <div class="post-preview personal">
                     <a href="post20150219.html">
                         <h2 class="post-title">
                             Xue Zhong Wen
@@ -162,7 +167,7 @@
                     <p class="post-meta">Posted on February 19, 2015</p>
                 </div>
 <hr>
-		<div class="post-preview">
+		<div class="post-preview programming">
                     <a href="twitterbot.html">
                         <h2 class="post-title">
                             How to make a Twitter bot using Ruby
@@ -174,7 +179,7 @@
                     <p class="post-meta">Posted on January 22, 2015</p>
                 </div>
                 <hr>
-                <div class="post-preview">
+                <div class="post-preview programming">
                     <a href="post20150120.html">
                         <h2 class="post-title">
                             Introducing... Decision Bot!
@@ -207,7 +212,20 @@
 </html>
 
 
-
+<script>
+$( "#all" ).click(function() {
+  $(".personal").show();
+  $(".programming").show();
+});
+$( "#prog" ).click(function() {
+  $(".personal").hide();
+  $(".programming").show();
+});
+$( "#pers" ).click(function() {
+  $(".personal").show();
+  $(".programming").hide();
+});
+</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

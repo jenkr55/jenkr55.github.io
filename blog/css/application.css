@@ -33,3 +33,12 @@ color: white;
 	font-size: .8em;
 	font-style: italic;
 }
+
+.show {
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-decoration: none;
+}
+
+.showLink {
+	text-decoration: none;
+}
