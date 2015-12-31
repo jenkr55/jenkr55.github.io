@@ -1,38 +1,44 @@
+.postImg {
+  max-width: 30%;
+}
 
-  #pronunciation {
-    font-style: italic;
-    font-size: .7em;
-    font-family: courier;
-    text-transform: lowercase;
-    padding-left: 110px;
-  }
-  
-  #name {
-  font-size: 5em;
+.contactText {
+   font-style: italic;
+   font-size: .8em;
+ }
+
+p {
   font-family: helvetica;
-  }
+  font-size: .85em;
+}
 
-#desc {
-  max-width: 300px;
-  text-transform: lowercase;
- }
- 
- .me-image {
-   max-height: 210px;
-   border-radius: 10%;
-   max-width: 193px;
- }
- 
- #placeholder {
-   text-align: center;
-   }
-   
-   #selfDesc {
-   text-transform: none;
-   }
+.blogImg {
+  max-width: 100%
+}
 
-#header-wrapper {
-  background-position: 50% 20% !important;
-  background: url('images/header2.jpg');
-  }
-  
+.site-heading {
+color: white;
+}
+
+.blogImgShort{
+	max-width: 100%;
+	max-height: 500px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.caption {
+	text-align: center;
+	font-size: .8em;
+	font-style: italic;
+}
+
+.show {
+	font-family: 'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+	text-decoration: none;
+}
+
+.showLink {
+	text-decoration: none;
+}
