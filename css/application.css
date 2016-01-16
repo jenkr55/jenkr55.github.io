@@ -42,3 +42,63 @@ color: white;
 .showLink {
 	text-decoration: none;
 }
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+  text-align: right;
+}
+
+.container {
+	display: none;
+}
+
+.overlay-img {
+  width: 100%;
+  height: 100%;
+  background-image: url('http://jenniferkruse.me/img/about/header.jpg');
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center;
+  margin-top: -33px;
+}
+
+.icon-list {
+  padding-right: 25%;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  list-style-type: none;
+  font-size: 2.5em;
+  color: white;
+  font-family: "Helvetica";
+}
+
+.icon-list li {
+	margin-top: 25px;
+}
+
+@media(max-width: 1106px){
+	.icon-list {
+		font-size: 2em;
+	}
+
+	.overlay-img {
+		background-size: inherit;
+	}
+}
+
+@media(max-width: 760px){
+	.overlay-img {
+		background-size: cover;
+	}
+
+	.icon-list {
+		font-size: 1.75em;
+		padding-right: 12%;
+	}
+}
