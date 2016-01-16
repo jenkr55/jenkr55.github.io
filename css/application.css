@@ -70,7 +70,7 @@ color: white;
 .icon-list {
   padding-right: 25%;
   position: relative;
-  top: 50%;
+  top: 40%;
   transform: translateY(-50%);
   list-style-type: none;
   font-size: 2.5em;
@@ -79,20 +79,37 @@ color: white;
 }
 
 .icon-list li {
-	margin-top: 25px;
+	margin-top: 15px;
 }
 
-@media(max-width: 1106px){
+#line {
+	margin-right: 0px;
+	width: 380px;
+	max-width: 400px;
+	margin-top: -10px;
+	opacity: .6;
+}
+
+@media(max-width: 1160px) {
 	.icon-list {
+		padding-right: 20%;
 		font-size: 2em;
 	}
 
+	#line {
+		width: 305px;
+	}
+}
+
+@media(max-width: 1106px){
 	.overlay-img {
 		background-size: inherit;
 	}
 }
-
 @media(max-width: 760px){
+	.navbar {
+		visibility: hidden;
+	}
 	.overlay-img {
 		background-size: cover;
 	}
@@ -100,5 +117,10 @@ color: white;
 	.icon-list {
 		font-size: 1.75em;
 		padding-right: 12%;
+	}
+
+	#line {
+		width: 260px;
+		margin-top: -5px;
 	}
 }
