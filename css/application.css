@@ -64,11 +64,9 @@ color: white;
   background-repeat:no-repeat;
   background-size:contain;
   background-position:center;
-  margin-top: -33px;
 }
 
 .icon-list {
-  padding-right: 25%;
   position: relative;
   top: 40%;
   transform: translateY(-50%);
@@ -76,6 +74,9 @@ color: white;
   font-size: 2.5em;
   color: white;
   font-family: "Helvetica";
+  text-align: left;
+  margin-left: 50%;
+
 }
 
 .icon-list li {
@@ -83,7 +84,7 @@ color: white;
 }
 
 #line {
-	margin-right: 0px;
+	margin-left: 0px;
 	width: 380px;
 	max-width: 400px;
 	margin-top: -10px;
@@ -92,7 +93,6 @@ color: white;
 
 @media(max-width: 1160px) {
 	.icon-list {
-		padding-right: 20%;
 		font-size: 2em;
 	}
 
@@ -103,7 +103,11 @@ color: white;
 
 @media(max-width: 1106px){
 	.overlay-img {
-		background-size: inherit;
+		background-size: cover;
+	}
+
+	.icon-list {
+		margin-left: 48%;
 	}
 }
 @media(max-width: 760px){
@@ -115,12 +119,23 @@ color: white;
 	}
 
 	.icon-list {
+		margin-left: 45%;
 		font-size: 1.75em;
-		padding-right: 12%;
 	}
 
 	#line {
 		width: 260px;
 		margin-top: -5px;
+	}
+}
+
+@media(max-width: 525px) {
+	.icon-list {
+		margin-left: 40%;
+		font-size: 1.25em;
+	}
+
+	#line {
+		width: 200px;
 	}
 }
