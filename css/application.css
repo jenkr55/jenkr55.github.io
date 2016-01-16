@@ -51,10 +51,7 @@ color: white;
   left: 0;
   background-color: white;
   text-align: right;
-}
-
-.container {
-	display: none;
+  z-index: 100;
 }
 
 .overlay-img {
@@ -62,7 +59,7 @@ color: white;
   height: 100%;
   background-image: url('http://jenniferkruse.me/img/about/header.jpg');
   background-repeat:no-repeat;
-  background-size:contain;
+  background-size:cover;
   background-position:center;
 }
 
@@ -89,6 +86,10 @@ color: white;
 	max-width: 400px;
 	margin-top: -10px;
 	opacity: .6;
+}
+
+#blog, #git {
+	text-decoration: none !important;
 }
 
 @media(max-width: 1160px) {

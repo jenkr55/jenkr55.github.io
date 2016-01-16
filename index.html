@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jen's Blog</title>
+    <title>Jennifer Kruse</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,24 +36,24 @@
 <div class="overlay">
     <div class="overlay-img">
         <div class="icon-list">
-                        <b>Jennifer Kruse</b>
-                        <hr class="small" id="line">
-                        <li class="blog">
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>Blog
-                        </li>
-                       <li>
-                            <a href="http://github.com/jenkr55">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>Github
-                        </li> 
+            <b>Jennifer Kruse</b>
+            <hr class="small" id="line">
+            <li>
+                <a href="#" class="blog" id="blog">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-pencil fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>Blog
+            </li>
+            <li>
+                <a href="http://github.com/jenkr55" id="git">
+                    <span class="fa-stack fa-lg">
+                        <i class="fa fa-circle fa-stack-2x"></i>
+                        <i class="fa fa-github-alt fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>Github
+            </li> 
         </div>
     </div>
 </div>
@@ -74,7 +74,7 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li>
+                    <li style="z-index: 2">
                         <a href="about.html">About Me</a>
                     </li>
                 </ul>
@@ -87,11 +87,11 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
     <header class="intro-header" style="background-image: url('img/header-laptop.jpg')">
-        <div class="container">
+        <div class="container" style="display: none">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Jennifer Kruse</h1>
+                        <h1>Jen's Blog</h1>
                         <hr class="small">
                         <span class="subheading">projects, programming, miscellaneous </span>
                     </div>
@@ -99,13 +99,13 @@
             </div>
         </div>
     </header>
-    <div class="container">
+    <div class="container" style="display: none">
         <div class="row">
     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
       <p class="show">  Show: <a class="showLink" id="prog" href="#">Programming</a> | <a class="showLink" id="pers" href="#">Personal</a> | <a class="showLink" id="all" href="#">All</a> </p>
       </div></div></div>
     <!-- Main Content -->
-   <div class="container">
+   <div class="container" style="display: none">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
 
@@ -304,7 +304,6 @@ $( "#pers" ).click(function() {
 </script>
 <script>
       $( ".blog" ).click(function() {
-        console.log("hi");
         $(".container").css("display","block");
         $(".overlay").css("display", "none");
       });
