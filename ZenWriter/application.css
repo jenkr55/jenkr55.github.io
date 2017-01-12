@@ -1,0 +1,35 @@
+.FormElement {
+  margin-left: auto;
+  margin-right: auto;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+}
+
+.bg {
+  background-repeat: no-repeat;
+}
+
+.box {
+  width: 700px ;
+  margin-left: 200px ;
+  margin-right: auto ;
+  margin-top: 60px;
+  margin-bottom: auto;
+}
+
+html, body {
+    margin: 0;
+    background-size: cover;
+}
+
+.header {
+   color: white;
+   font-size: 40px;
+   font-family: Helvetica;
+   font-weight: bold;
+   margin-left: 5px;
+   margin-top: 2px;
+}
+.header:hover {
+   opacity: .5;
+}
