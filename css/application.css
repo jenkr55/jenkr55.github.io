@@ -12,6 +12,13 @@ p {
   font-size: .85em;
 }
 
+ul {
+  margin-top: -25px;
+  font-family: helvetica;
+  font-size: .85em;
+}
+
+
 .blogImg {
   max-width: 100%
 }
